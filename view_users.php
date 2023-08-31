@@ -41,8 +41,12 @@ $result = $conn->query($sql);
                 <td><?php echo $row['id']; ?></td>
                 <td><?php echo $row['username']; ?></td>
                 <td><?php echo $row['type']; ?></td>
-                <td><a href="delete_user.php?id=<?php echo $row['id']; ?>"
-                        onclick="return confirm('Tem certeza de que deseja excluir este usuário?')">Excluir</a></td>
+                <td>
+                    <a href="delete_user.php?id=<?php echo $row['id']; ?>"
+                        onclick="return confirm('Tem certeza de que deseja excluir este usuário?')">Excluir</a>
+                </td>
+                <td><a href="edit_user.php?id=<?php echo $row['id']; ?>">Editar</a></td>
+
             </tr>
             <?php endwhile; ?>
         </table>
