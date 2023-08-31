@@ -2,6 +2,8 @@
 session_start();
 require_once 'includes/db.php';
 
+$error = "";
+
 if (isset($_SESSION['username'])) {
     header("Location: dashboard.php");
     exit();
@@ -21,10 +23,10 @@ if (isset($_POST['login'])) {
             $_SESSION['type'] = $row['type'];
             header("Location: dashboard.php");
         } else {
-            echo "Senha incorreta!";
+            $error = "Senha incorreta!";
         }
     } else {
-        echo "Usuário não encontrado!";
+        $error = "Usuário não encontrado!";
     }
 }
 ?>
@@ -34,15 +36,21 @@ if (isset($_POST['login'])) {
 
 <head>
     <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="./styles/style.css">
 </head>
 
 <body>
-    <h2>Login</h2>
-    <form method="post" action="">
-        <input type="text" name="username" placeholder="Nome de usuário" required><br>
-        <input type="password" name="password" placeholder="Senha" required><br>
-        <input type="submit" name="login" value="Entrar">
-    </form>
+    <div class="login">
+        <h2>Login</h2>
+        <div class="form">
+            <form method="post" action="">
+                <input type="text" name="username" placeholder="Nome de usuário" required><br>
+                <input type="password" name="password" placeholder="Senha" required><br>
+                <span style="color: red; margin-bottom: 10px"><?php echo $error; ?><br></span>
+                <input type="submit" name="login" value="Entrar">
+            </form>
+        </div>
+    </div>
 </body>
 
 </html>

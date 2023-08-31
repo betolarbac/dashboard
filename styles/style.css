@@ -1,0 +1,213 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.login {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    margin-top: 100px;
+}
+
+.login  h2 {
+    text-align: center;
+}
+
+.login form {
+    margin-top: 20px;
+}
+
+.login  label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.login  input[type="text"],
+.login  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.login input[type="submit"] {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.login  input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.error {
+    color: red;
+    margin-top: 5px;
+}
+
+.form {
+    width: 350px;
+    margin: 0 auto;
+}
+
+.dash{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    margin-top: 30px;
+}
+
+.dash h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.dash p {
+    margin-bottom: 15px;
+}
+
+.dash a {
+    color: #4caf50;
+    text-decoration: none;
+}
+
+.dash a:hover {
+    text-decoration: underline;
+}
+
+.dash table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.dash table, th, td {
+    border: 1px solid #ccc;
+}
+
+.dash th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+.dash th {
+    background-color: #f2f2f2;
+}
+
+
+.register {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    margin-top: 100px;
+}
+
+.register  h2 {
+    text-align: center;
+}
+
+.register  form {
+    margin-top: 20px;
+}
+
+.register  label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.register  input[type="text"],
+.register  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.register  select {
+    width: 106%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.register  input[type="submit"] {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.register  input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.error {
+    color: red;
+    margin-top: 5px;
+}
+
+
+.users{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    margin-top: 30px;
+}
+
+.users h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.users table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.users table, th, td {
+    border: 1px solid #ccc;
+}
+
+.users th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+.users th {
+    background-color: #f2f2f2;
+}
+
+.users a {
+    color: #4caf50;
+    text-decoration: none;
+}
+
+.users a:hover {
+    text-decoration: underline;
+}
