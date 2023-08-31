@@ -3,6 +3,11 @@
 require_once 'includes/db.php';
 session_start();
 
+if ($_SESSION['type'] !== 'admin') {
+    header("Location: dashboard.php"); // Redirecionar para a página de dashboard
+    exit();
+}
+
 if (isset($_POST['register'])) {
     $username = mysqli_real_escape_string($conn, $_POST['username']); // Validação e limpeza de entrada
     $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
