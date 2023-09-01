@@ -34,14 +34,16 @@ $result = $conn->query($sql);
                 <th>status</th>
             </tr>
             <?php while ($row = $result->fetch_assoc()) : ?>
-            <tr>
-                <td><?php echo $row['id']; ?></td>
-                <td><?php echo $row['name']; ?></td>
-                <td><?php echo $row['description']; ?></td>
-                <td class="<?php echo strtolower($row['status']); ?>">
-                    <?php echo str_replace("_", " ", $row['status']) ?>
-                </td>
-            </tr>
+                <tr>
+                    <td><?php echo $row['id']; ?></td>
+                    <td><?php echo $row['name']; ?></td>
+                    <td><?php echo $row['description']; ?></td>
+                    <td class="<?php echo strtolower($row['status']); ?>">
+                        <?php echo str_replace("_", " ", $row['status']) ?>
+                    </td>
+                    <td><a href="edit_task.php?id=<?php echo $row['id']; ?>">Editar Status</a></td>
+
+                </tr>
             <?php endwhile; ?>
         </table>
         <a href="dashboard.php">Voltar ao Painel de Controle</a>

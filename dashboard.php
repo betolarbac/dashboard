@@ -27,8 +27,11 @@ $type = $_SESSION['type'];
         <br />
         <a href="view_users.php">Ver Usuários</a>
         <br />
+        <a href="view_tasks.php">Tasks</a>
+        <br />
         <a href="create_task.php">Criar Tarefa</a>
         <br />
+
         <?php endif; ?>
         <a href="logout.php">Sair</a>
     </div>
