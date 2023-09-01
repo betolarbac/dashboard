@@ -1,7 +1,6 @@
 <?php
 session_start();
 require_once './includes/db.php';
-require_once './includes/taskDb.php';
 
 if ($_SESSION['type'] !== 'admin') {
     header("Location: dashboard.php");
@@ -49,9 +48,8 @@ if (isset($_GET['id'])) {
             <form method="post">
                 <label for="new_status">Novo Status:</label>
                 <select id="new_status" name="new_status">
-                    <option value="Em Andamento" <?php if ($task_data['status'] === 'Em Andamento') echo 'selected'; ?>>
-                        Em
-                        Andamento</option>
+                    <option value="Em_Progesso" <?php if ($task_data['status'] === 'Em_Progesso') echo 'selected'; ?>>
+                        Em Progesso</option>
                     <option value="Concluída" <?php if ($task_data['status'] === 'Concluída') echo 'selected'; ?>>
                         Concluída
                     </option>
