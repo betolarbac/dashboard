@@ -19,9 +19,11 @@ if (isset($_POST['login'])) {
     if ($result->num_rows == 1) {
         $row = $result->fetch_assoc();
         if (password_verify($password, $row['password'])) {
+            $_SESSION['user_id'] = $row['id']; // Correção: Definir user_id na sessão
             $_SESSION['username'] = $username;
             $_SESSION['type'] = $row['type'];
             header("Location: dashboard.php");
+            exit();
         } else {
             $error = "Senha incorreta!";
         }
