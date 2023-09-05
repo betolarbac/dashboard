@@ -7,6 +7,10 @@ body {
   padding: 0;
 }
 
+.flex {
+  display: flex;
+}
+
 .login {
   max-width: 400px;
   margin: 0 auto;

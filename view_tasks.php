@@ -39,33 +39,37 @@ $result = $conn->query($sql);
 </head>
 
 <body>
-    <div class="users">
-        <h2>Lista de Tasks</h2>
-        <form method="get">
-            <label for="filter_client">Filtrar por Cliente:</label>
-            <select id="filter_client" name="filter_client">
-                <option value="">Todos</option>
-                <?php
-                $client_query = "SELECT DISTINCT assigned_user_id FROM task";
-                $client_result = $conn->query($client_query);
-                while ($client_row = $client_result->fetch_assoc()) {
-                    $client_name = getUserName($client_row['assigned_user_id']);
-                    echo "<option value='" . $client_row['assigned_user_id'] . "'>$client_name</option>";
-                }
-                ?>
-            </select>
-            <input type="submit" value="Filtrar">
-        </form>
 
-        <table>
-            <tr>
-                <th>ID</th>
-                <th>Cliente</th>
-                <th>task</th>
-                <th>Descrição</th>
-                <th>status</th>
-            </tr>
-            <?php while ($row = $result->fetch_assoc()) : ?>
+    <div class="flex">
+        <?php include "./navbar.php" ?>
+
+        <div class="users">
+            <h2>Lista de Tasks</h2>
+            <form method="get">
+                <label for="filter_client">Filtrar por Cliente:</label>
+                <select id="filter_client" name="filter_client">
+                    <option value="">Todos</option>
+                    <?php
+                    $client_query = "SELECT DISTINCT assigned_user_id FROM task";
+                    $client_result = $conn->query($client_query);
+                    while ($client_row = $client_result->fetch_assoc()) {
+                        $client_name = getUserName($client_row['assigned_user_id']);
+                        echo "<option value='" . $client_row['assigned_user_id'] . "'>$client_name</option>";
+                    }
+                    ?>
+                </select>
+                <input type="submit" value="Filtrar">
+            </form>
+
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Cliente</th>
+                    <th>task</th>
+                    <th>Descrição</th>
+                    <th>status</th>
+                </tr>
+                <?php while ($row = $result->fetch_assoc()) : ?>
                 <tr>
                     <td><?php echo $row['id']; ?></td>
                     <td><?php echo $row['assigned_user_id'] ? getUserName($row['assigned_user_id']) : 'Nenhum'; ?></td>
@@ -77,9 +81,11 @@ $result = $conn->query($sql);
                     <td><a href="edit_task.php?id=<?php echo $row['id']; ?>">Editar Status</a></td>
 
                 </tr>
-            <?php endwhile; ?>
-        </table>
-        <a href="dashboard.php">Voltar ao Painel de Controle</a>
+                <?php endwhile; ?>
+            </table>
+            <a href="dashboard.php">Voltar ao Painel de Controle</a>
+        </div>
+
     </div>
 </body>
 
