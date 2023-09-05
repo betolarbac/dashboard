@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.navbar {
+  max-width: 184px;
+  background-color: #060606;
+  height: 100vh;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding: 0 46px 0 30px;
+}
+
+.navbar__logo h2 {
+  color: #fff;
+  font-size: 32px;
+  margin-bottom: 77px;
+}
+
+.navbar__create button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 20px 5px 7px;
+  border-radius: 24px;
+  background: #fff;
+  margin-bottom: 30px;
+  border: none;
+}
+
+.active {
+  border-radius: 24px;
+  background: #fff;
+}
+
+.navbar__list .active a {
+  color: #e65f2b;
+}
+
+.navbar__create button:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+.navbar__list {
+  padding: 0;
+  list-style: none;
+}
+
+.navbar__list li {
+  padding: 0;
+  list-style: none;
+  padding: 13px 0 13px 16px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar__list li:hover {
+  cursor: pointer;
+}
+
+.navbar__list a {
+  color: #f1f1f1;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
+}
