@@ -24,7 +24,7 @@ body {
   margin-bottom: 77px;
 }
 
-.navbar__create button {
+.navbar__create a {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -33,6 +33,12 @@ body {
   background: #fff;
   margin-bottom: 30px;
   border: none;
+  color: #171717;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
 }
 
 .active {
@@ -44,7 +50,11 @@ body {
   color: #e65f2b;
 }
 
-.navbar__create button:hover {
+.active svg path {
+  fill: #e65f2b;
+}
+
+.navbar__create a:hover {
   opacity: 0.9;
   cursor: pointer;
 }
