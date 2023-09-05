@@ -2,9 +2,16 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
   margin: 0;
   padding: 0;
+  background-color: #ebdfd7;
+}
+
+h2,
+h3,
+h1,
+h4 {
+  margin: 0;
 }
 
 .flex {
@@ -64,56 +71,6 @@ body {
 .form {
   width: 350px;
   margin: 0 auto;
-}
-
-.dash {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-  margin-top: 30px;
-}
-
-.dash h2 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.dash p {
-  margin-bottom: 15px;
-}
-
-.dash a {
-  color: #4caf50;
-  text-decoration: none;
-}
-
-.dash a:hover {
-  text-decoration: underline;
-}
-
-.dash table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 15px;
-}
-
-.dash table,
-th,
-td {
-  border: 1px solid #ccc;
-}
-
-.dash th,
-td {
-  padding: 10px;
-  text-align: left;
-}
-
-.dash th {
-  background-color: #f2f2f2;
 }
 
 .register {

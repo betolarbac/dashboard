@@ -9,6 +9,7 @@ if (!isset($_SESSION['username'])) {
 require_once 'includes/db.php'; // Inclua a configuração da conexão com o banco de dados aqui
 
 $username = $_SESSION['username'];
+$type = $_SESSION['type'];
 
 // Modificação: Buscar as tarefas relacionadas ao usuário logado
 $user_id = $_SESSION['user_id'];
@@ -22,14 +23,26 @@ $result = $conn->query($sql);
 <head>
     <title>Dashboard</title>
     <link rel="stylesheet" type="text/css" href="./styles/style.css">
+    <link rel="stylesheet" type="text/css" href="./styles/dashboard.css">
 </head>
 
 <body>
     <div class="flex">
         <?php include "./navbar.php" ?>
         <div class="dash">
-            <h2>Bem-vindo, <?php echo $username; ?>!</h2>
-            <?php echo $_SERVER['REQUEST_URI']; ?>
+            <div class="header">
+                <h2 class="header__title">Dashboard</h2>
+
+                <div class="header__info">
+                    <img src="./assets/imgs/user-perfil.webp" alt="">
+                    <div>
+                        <h3><?php echo $username; ?></h3>
+                        <h4><?php echo $type ?></h4>
+                    </div>
+                </div>
+            </div>
+
+
             <p>Esta é a página do seu painel de controle.</p>
 
             <!-- Exibir tarefas no dashboard -->
