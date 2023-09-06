@@ -32,32 +32,32 @@ if (isset($_POST['register'])) {
 <html>
 
 <head>
-    <title>Registro</title>
-    <link rel="stylesheet" type="text/css" href="./styles/style.css">
+  <title>Registro</title>
+  <link rel="stylesheet" type="text/css" href="./styles/style.css">
 </head>
 
 <body>
 
 
-    <div class="flex">
-        <?php include "./navbar.php" ?>
-        <div class="register">
-            <h2>Registro</h2>
-            <?php $msg; ?>
-            <div class="form">
-                <form method="post" action="register.php">
-                    <input type="text" name="username" placeholder="Nome de usuário" required><br>
-                    <input type="password" name="password" placeholder="Senha" required><br>
-                    <select name="type">
-                        <option value="user">Usuário</option>
-                        <option value="admin">Administrador</option>
-                    </select>
-                    <input type="submit" name="register" value="Registrar">
-                </form>
-            </div>
-        </div>
-
+  <div class="flex">
+    <?php include "./navbar.php" ?>
+    <div class="register">
+      <h2>Registro</h2>
+      <?php $msg; ?>
+      <div class="form">
+        <form method="post" action="register.php">
+          <input type="text" name="username" placeholder="Nome de usuário" required><br>
+          <input type="password" name="password" placeholder="Senha" required><br>
+          <select name="type">
+            <option value="user">Usuário</option>
+            <option value="admin">Administrador</option>
+          </select>
+          <input type="submit" name="register" value="Registrar">
+        </form>
+      </div>
     </div>
+
+  </div>
 </body>
 
 </html>

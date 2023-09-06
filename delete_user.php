@@ -3,19 +3,19 @@ session_start();
 require_once 'includes/db.php';
 
 if ($_SESSION['type'] !== 'admin') {
-    header("Location: dashboard.php");
-    exit();
+  header("Location: dashboard.php");
+  exit();
 }
 
 if (isset($_GET['id'])) {
-    $user_id = $_GET['id'];
-    $sql = "DELETE FROM users WHERE id = '$user_id'";
-    if ($conn->query($sql) === TRUE) {
-        $_SESSION['delete_message'] = "Usuário excluído com sucesso!";
-    } else {
-        $_SESSION['delete_message'] = "Erro ao excluir usuário: " . $conn->error;
-    }
+  $user_id = $_GET['id'];
+  $sql = "DELETE FROM users WHERE id = '$user_id'";
+  if ($conn->query($sql) === TRUE) {
+    $_SESSION['delete_message'] = "Usuário excluído com sucesso!";
+  } else {
+    $_SESSION['delete_message'] = "Erro ao excluir usuário: " . $conn->error;
+  }
 
-    header("Location: view_users.php");
-    exit();
+  header("Location: view_users.php");
+  exit();
 }
