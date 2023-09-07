@@ -2,8 +2,8 @@
 session_start();
 
 if (!isset($_SESSION['username'])) {
-    header("Location: login.php");
-    exit();
+  header("Location: login.php");
+  exit();
 }
 
 require_once 'includes/db.php'; // Inclua a configuração da conexão com o banco de dados aqui
@@ -42,33 +42,28 @@ $result = $conn->query($sql);
         </div>
       </div>
 
+      <div class="main">
+        <?php if ($result->num_rows > 0) : ?>
+          <div class="card__container">
+            <?php while ($row = $result->fetch_assoc()) : ?>
+              <div class="card">
+                <div class="card__wrapper">
+                  <div class="card__tags">
+                    <span>dev</span>
+                    <span>mercado</span>
+                  </div>
 
-      <p>Esta é a página do seu painel de controle.</p>
+                  <h2 class="card__title"><?php echo $row['name']; ?></h2>
+                  <p class="card__paragraph"><?php echo $row['description']; ?></p>
+                </div>
+              </div>
+            <?php endwhile; ?>
+          </div>
+        <?php else : ?>
+          <p>Nenhuma tarefa encontrada.</p>
+        <?php endif; ?>
+      </div>
 
-      <!-- Exibir tarefas no dashboard -->
-      <h3>Suas Tarefas:</h3>
-      <?php if ($result->num_rows > 0) : ?>
-      <table>
-        <tr>
-          <th>task</th>
-          <th>Descrição</th>
-          <th>status</th>
-        </tr>
-        <?php while ($row = $result->fetch_assoc()) : ?>
-        <tr>
-          <td><?php echo $row['name']; ?></td>
-          <td><?php echo $row['description']; ?></td>
-          <td class="<?php echo strtolower($row['status']); ?>">
-            <?php echo str_replace("_", " ", $row['status']) ?>
-          </td>
-          <td><a href="edit_task.php?id=<?php echo $row['id']; ?>">Editar Status</a></td>
-
-        </tr>
-        <?php endwhile; ?>
-      </table>
-      <?php else : ?>
-      <p>Nenhuma tarefa encontrada.</p>
-      <?php endif; ?>
 
       <a href="logout.php">Sair</a>
     </div>

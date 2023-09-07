@@ -1,6 +1,7 @@
 .dash {
   width: 100%;
   background-color: #ebdfd7;
+  overflow: hidden;
 }
 
 .header {
@@ -51,4 +52,65 @@
   font-weight: 400;
   line-height: normal;
   text-transform: capitalize;
+}
+
+.main {
+  margin: 24px 30px 16px 30px;
+}
+
+.card {
+  border-radius: 14px;
+  min-width: 250px;
+  max-width: 250px;
+  padding: 24px 40px 24px 26px;
+  background: rgba(255, 255, 255, 0.34);
+  box-shadow: 0px 3px 6px 0px rgba(16, 24, 40, 0.06),
+    0px 3px 9px 0px rgba(16, 24, 40, 0.1);
+}
+
+.card__container {
+  display: flex;
+  gap: 16px;
+
+  overflow-x: scroll;
+  padding-bottom: 16px;
+  padding-right: 16px;
+}
+
+.card__wrapper {
+  border-left: 5px solid rgba(26, 147, 46, 0.18);
+  padding-left: 20px;
+}
+
+.card__tags span {
+  border-radius: 8px;
+  background: #fff;
+  padding: 8px 10px;
+  color: #102a43;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.card__paragraph {
+  color: #060606;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.2px;
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card__title {
+  color: #060606;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.16px;
+  margin-top: 10px;
 }
