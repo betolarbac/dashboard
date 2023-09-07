@@ -56,3 +56,15 @@
   opacity: 0.9;
   cursor: pointer;
 }
+
+.login__input {
+  margin: 10px 0;
+}
+
+.login__label {
+  color: #555;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}

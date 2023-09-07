@@ -49,8 +49,8 @@ if (isset($_POST['login'])) {
       <div class="login__inputs">
         <h2>Login</h2>
         <form method="post" action="">
-          <label for="username">Email</label><br>
-          <div class="flex">
+          <label class="login__label" for="username">Email</label><br>
+          <div class="flex login__input">
             <input type="text" name="username" placeholder="email@email.com" required>
             <span>
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -66,8 +66,8 @@ if (isset($_POST['login'])) {
             </span><br>
           </div>
 
-          <label for="username">Senha</label><br>
-          <div class="flex">
+          <label class="login__label" for="username">Senha</label><br>
+          <div class="flex login__input">
             <input type="password" name="password" placeholder="Senha" required>
             <span>
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -80,7 +80,8 @@ if (isset($_POST['login'])) {
                   </clipPath>
                 </defs>
               </svg>
-            </span><br>
+            </span>
+            <br>
           </div>
           <span style="color: red; margin-bottom: 10px"><?php echo $error; ?><br></span>
           <input type="submit" name="login" value="Entrar" class="login__entrar">
