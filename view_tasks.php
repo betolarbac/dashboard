@@ -70,17 +70,19 @@ $result = $conn->query($sql);
           <th>status</th>
         </tr>
         <?php while ($row = $result->fetch_assoc()) : ?>
-          <tr>
-            <td><?php echo $row['id']; ?></td>
-            <td><?php echo $row['assigned_user_id'] ? getUserName($row['assigned_user_id']) : 'Nenhum'; ?></td>
-            <td><?php echo $row['name']; ?></td>
-            <td><?php echo $row['description']; ?></td>
-            <td class="<?php echo strtolower($row['status']); ?>">
-              <?php echo str_replace("_", " ", $row['status']) ?>
-            </td>
-            <td><a href="edit_task.php?id=<?php echo $row['id']; ?>">Editar Status</a></td>
+        <tr>
+          <td><?php echo $row['id']; ?></td>
+          <td><?php echo $row['assigned_user_id'] ? getUserName($row['assigned_user_id']) : 'Nenhum'; ?></td>
+          <td><?php echo $row['name']; ?></td>
+          <td><?php echo $row['description']; ?></td>
+          <td class="<?php echo strtolower($row['status']); ?>">
+            <?php echo str_replace("_", " ", $row['status']) ?>
+          </td>
+          <td><a href="edit_task.php?id=<?php echo $row['id']; ?>">Editar Status</a></td>
+          <td><a href="delete_task.php?id=<?php echo $row['id']; ?>"
+              onclick="return confirm('Tem certeza de que deseja excluir essa task ?')">excluir</a></td>
 
-          </tr>
+        </tr>
         <?php endwhile; ?>
       </table>
       <a href="dashboard.php">Voltar ao Painel de Controle</a>
