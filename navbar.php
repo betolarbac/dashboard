@@ -24,9 +24,9 @@ include './includes/svg.php'
     </div>
 
     <?php if ($type === 'admin') : ?>
-    <div class="navbar__create">
-      <a href=""><img src="./assets/imgs/add-projetct.svg" alt="">Criar novo projeto</a>
-    </div>
+      <div class="navbar__create">
+        <a href=""><?php svgNewProject() ?>Criar novo projeto</a>
+      </div>
     <?php endif; ?>
 
     <ul class="navbar__list ">
